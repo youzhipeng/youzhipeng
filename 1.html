@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        var btn = document.getElementById('box')
+        function debounce(fn) {
+            let times = null;
+            return function () {
+                if(!item){
+                    fn.apply(this.arguments)
+                    times = setTimeout(() => {
+                        times = null
+                    }, 500)
+                }
+            }
+        }
+
+        function fn2() {
+            console.log("我是防抖")
+        }
+        btn.addEventListener(" click", debounce(fu2))
+    </script>
+</body>
+
+</html>

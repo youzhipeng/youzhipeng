@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
     <script>
-        function fn1(num) {
-            var sNum = String(num).split('').reverse().join('') - 0;
-            console.log(sum)
-            return sNum === num;
+        function a () {
+            var num = 1
+            return function b() {
+                num ++
+                console.log(num)
+            }
         }
-        console.log(fn1(1331));
+        var c = a()
+        c()
+        c()
     </script>
 </body>
-
 </html>
